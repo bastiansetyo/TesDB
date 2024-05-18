@@ -197,5 +197,13 @@ public class TesController {
         }
         return ("hasilnya  " + targetChar + ": " + jumlah);
     }
+    @Autowired
+    private TestRepository testRepository;
+
+    @GetMapping("/tug1")
+    public List<SepatuDao> tug() {
+        return testRepository.findAll();
+    }
+
 }
 
