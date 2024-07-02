@@ -8,14 +8,14 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "film")
+@Table(name = "products")
 @AllArgsConstructor
 @NoArgsConstructor
-public class FilmDao {
+public class ProductsDao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String nama_film;
-    private Integer bangku;
+    private String id;
+    private String name;
+    private Integer price;
 
 }
