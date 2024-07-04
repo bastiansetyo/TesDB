@@ -33,9 +33,9 @@ public class ProductsServiceImpl implements ProductsService {
 
     public ProductsDao CariHidden(String id) {
         ProductsDao response = new ProductsDao();
-        Optional<ProductsDao> dao = productsRepository.findById(id);
-        if(dao.isPresent()) {
-            response = dao.get();
+        List<ProductsDao> dao = productsRepository.findSemua(id);
+        if(!dao.isEmpty()) {
+            response = dao.get(0);
         }
         return response;
     }
