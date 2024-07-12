@@ -7,18 +7,15 @@ import lombok.NoArgsConstructor;
 
 @Data
 @Entity
-@Table(name = "tblpembeli")
+@Table(name = "products")
 @AllArgsConstructor
 @NoArgsConstructor
 public class SepatuDao {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "nama_pembeli")
-    private String nama;
-    @Column(name = "alamat_domisili")
-    private String alamatDomisili;
-    private String telp;
-    @Column(name = "alamat_pengiriman")
-    private String alamatPengirim;
+    @Column(name = "nama")
+    private String name;
+    @Column(name = "harga")
+    private String price;
 }

@@ -18,9 +18,9 @@ public class TesController {
     public String pali(@PathVariable String palindrome) {
         return this.palindrome(palindrome);
     }
-
+// stream untuk olah list belajar besok
     @PostMapping("/palindrome")
-    public String palindrome(@RequestBody String inputPalindrome) {
+    public String palindrome(@RequestBody String inputPalindrome) {//metod
         String ori, dibalik = "";
         System.out.println("ketik Palindrom");
         ori = inputPalindrome;
@@ -86,61 +86,6 @@ public class TesController {
         return response;
     }
 
-    @GetMapping("/angkot")
-    public List<String> angkoot() {
-        int i = 1;
-        List<String> response = new ArrayList<>();
-
-        while (i <= 10) {
-            String hasil = "angkot no. " + " " + i + " beroprasi dengan baik.";
-            ++i;
-            response.add(hasil);
-        }
-        return response;
-    }
-
-    @GetMapping("/angkot1")
-    public List<String> angkoot1() {
-        int noangkot = 1;
-        int angkotberoprasi = 6;
-        int jumlahangkot = 10;
-        List<String> response = new ArrayList<>();
-
-        while (noangkot <= angkotberoprasi) {
-            String hasil = "angkot no. " + " " + noangkot + " beroprasi dengan baik.";
-            ++noangkot;
-            response.add(hasil);
-        }
-        for (noangkot = angkotberoprasi + 1; noangkot <= jumlahangkot; noangkot++) {
-            String hasil = "angkot no. " + " " + noangkot + " tidak beroprasi.";
-            response.add(hasil);
-        }
-        return response;
-    }
-
-    @GetMapping("/angkot2")
-    public List<String> angkoot2() {
-
-        int angkotberoprasi = 6;
-        int jumlahangkot = 10;
-        List<String> response = new ArrayList<>();
-
-        for (int noangkot = 1; noangkot <= jumlahangkot; noangkot++) {
-
-            if (noangkot <= angkotberoprasi && noangkot != 5) {
-                String hasil = "angkot no. " + " " + noangkot + " beroprasi.";
-                response.add(hasil);
-            } else if (noangkot == 10 || noangkot == 8 || noangkot == 5) {
-                String hasil = "angkot no. " + " " + noangkot + " lembur.";
-                response.add(hasil);
-            } else {
-                String hasil = "angkot no. " + " " + noangkot + " tidak beroprasi.";
-                response.add(hasil);
-            }
-        }
-
-        return response;
-    }
 
 
     @PostMapping("/tugas")
@@ -204,6 +149,26 @@ public class TesController {
     public List<SepatuDao> tug() {
         return testRepository.findAll();
     }
+
+  /*  @GetMapping("/perul")
+    public List<String> peru() {
+        var comp = Math.random();
+        List<String> response = new ArrayList<>();
+        if (comp <= 0.33){
+            comp hsl = "batu";
+            response.add(hsl);
+
+        }else if (comp >= 0.34 && comp < 0.67){
+            comp hsl = "gunting";
+            response.add(hsl);
+
+        }else {
+            String hsl = "kertas";
+            response.add(hsl);
+        }
+        return response;
+    }
+*/
 
 }
 
