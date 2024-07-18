@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.ArrayList;
 import java.util.List;
 
-public class menggabungkanPalindromCharakter {
+public class MenggabungkanPalindromCharakter {
     @PostMapping("/tugas")
     public List<String> tuugas(@RequestBody TestDto input) {
         String ori;
