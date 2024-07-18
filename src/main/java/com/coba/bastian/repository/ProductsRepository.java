@@ -13,4 +13,5 @@ public interface ProductsRepository extends JpaRepository<ProductsDao,String> {
 
     @Query(value = "select p from ProductsDao p where p.id = ?1")
     List<ProductsDao> findSemua(String strings);
+
 }

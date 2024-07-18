@@ -32,7 +32,6 @@ public class BsController {
         bsRepository.deleteById(id);
         return bsRepository.findAll();
     }
-
 }
 
 

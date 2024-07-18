@@ -44,6 +44,11 @@
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-kernel</artifactId>
+			<version>1.7.4</version>
+		</dependency>
 	</dependencies>
 
 	<build>
