@@ -14,7 +14,6 @@ import java.util.Properties;
 public class HibernateConfig {
 
     private Map<String,String> properties = new HashMap<>();
-
     public Properties toProperties(){
         Properties prop = new Properties();
 
@@ -22,5 +21,4 @@ public class HibernateConfig {
 
         return prop;
     }
-
 }
