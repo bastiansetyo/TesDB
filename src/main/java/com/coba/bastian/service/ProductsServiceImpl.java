@@ -1,9 +1,10 @@
 package com.coba.bastian.service;
 
-import com.coba.bastian.dao.Products2Dao;
+import com.coba.bastian.dao.ProductsIpaDao;
 import com.coba.bastian.dao.ProductsDao;
 import com.coba.bastian.dto.ProductsDto;
 import com.coba.bastian.data.Products2Repository;
+import com.coba.bastian.dto.ProductsIpaDto;
 import com.coba.bastian.repository.ProductsRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -23,9 +24,10 @@ public class ProductsServiceImpl implements ProductsService {
 
     @Autowired
     private ProductsRepository productsRepository;
-    private Products2Repository products2Repository;
+
+       private Products2Repository products2Repository;
     @Override
-    public List<Products2Dao> Tampil2(){
+    public List<ProductsIpaDao> Tampil2(){
         return products2Repository.findAll();
     }
     public List<ProductsDto> TampilHidden() {
