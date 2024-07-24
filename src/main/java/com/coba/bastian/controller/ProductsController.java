@@ -1,22 +1,21 @@
 package com.coba.bastian.controller;
 
-import com.coba.bastian.dao.Products2Dao;
+import com.coba.bastian.dao.ProductsIpaDao;
 import com.coba.bastian.dao.ProductsDao;
 import com.coba.bastian.dto.ProductsDto;
 import com.coba.bastian.data.Products2Repository;
 import com.coba.bastian.repository.ProductsRepository;
+//import com.coba.bastian.service.ProductsIpaService;
 import com.coba.bastian.service.ProductsService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @Slf4j
 @RestController
+@RequestMapping
 public class ProductsController {
 
     @Autowired
@@ -25,8 +24,9 @@ public class ProductsController {
     @Autowired
     private ProductsService productsService;
 
+
     @GetMapping("/menampilkantabel2")
-    public List<Products2Dao> menuu() {return productsService.Tampil2();}
+    public List<ProductsIpaDao> menuu() {return productsService.Tampil2();}
     @GetMapping("/menampilkanTabelMenu")
     public List<ProductsDto> menu () {
         return productsService.TampilHidden();
